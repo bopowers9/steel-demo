@@ -4,7 +4,7 @@
 ### Source
 The dataset that I used in this project is the Northeastern University (NEU) surface defect database. http://faculty.neu.edu.cn/yunhyan/NEU_surface_defect_database.html
 
-I am grateful to Drs. Song and Yan for making this dataset available. Scroll to the bottom of this page to see examples of their work.
+I am not affiliated with NEU or the researchers who created this dataset, but I am grateful to Drs. Song and Yan for making this dataset available. Scroll to the bottom of this page to see examples of their work.
 
 ### Organization
 This database consists of 1,800 square images of hot-rolled steel.
