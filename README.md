@@ -1,7 +1,5 @@
 # Detecting Defects in Steel Using Tensorflow
 
-***
-
 ## Data
 ### Source
 The dataset that I used in this project is the Northeastern University (NEU) [surface defect database](http://faculty.neu.edu.cn/yunhyan/NEU_surface_defect_database.html).
@@ -24,8 +22,6 @@ Here is an example of what a training batch looks like:
 
 Note that there are no images of steel *without defects* in this database. For the purposes of this demo, the model will only be trained to differentiate between defects.
 
-***
-
 ## Instructions
 
 ### Step 1. Download the data
@@ -35,19 +31,22 @@ The database is a zipped archive, with IMAGES and ANNOTATIONS subdirectories. Si
 `C:\Users\User\Documents\data\NEU-DET\IMAGES`
 
 ### Step 2. Clone this repo and activate the virtual environment
-I recommend using [pipenv](https://pypi.org/project/pipenv/). In the project root folder, you can activate the environment with this command:
-`pipenv install`
+I recommend using [pipenv](https://pypi.org/project/pipenv/). In the project root folder, you can activate the environment with this command:<br>
+`pipenv install`<br>
 `pipenv shell`
 
 ### Step 3. Run setup.py to set up the database for training
-This script has one required argument, which is the path copied from Step 1. For example, in my case this worked using Windows 10 Powershell:
+This script has one required argument, which is the path copied from Step 1. For example, in my case this worked using Windows 10 Powershell:<br>
 `python setup.py C:\Users\User\Documents\data\NEU-DET\IMAGES`
 
 This script reorganizes the IMAGES directory so that the classes are put into separate sub-directories. This is done so that we can use convenience methods in Keras for loading the data.
 
 ### Step 4. Run main.py to build and train the model
-This is where the majority of the work happens. As with setup.py, you must pass in the path to the IMAGES directory.
+This is where the majority of the work happens. As with setup.py, you must pass in the path to the IMAGES directory.<br>
 `python main.py C:\Users\User\Documents\data\NEU-DET\IMAGES`
+
+If all goes well, plots of accuracy and loss will be displayed for the training and validation sets, like so...
+![Example performance image](sample_plots/example_acc_loss.png)
 
 ***
 
